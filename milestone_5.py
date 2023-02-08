@@ -31,14 +31,13 @@ class Hangman:
     
     def check_guess(self,guess):
         guess = guess.lower()
-        word_chars = self.word.split()
-
+        word_chars = [c for c in self.word]
         if(guess in self.word):
             print("Good guess! "+guess+" is in the word")
             for i in range(len(word_chars)):
                 if(guess==word_chars[i]):
                     self.word_guessed[i]=guess
-                    self.num_letters = self.num_letters -1 
+            self.num_letters = self.num_letters -1 
             print("num letters: "+str(self.num_letters))          
         else:
             self.num_lives -= 1
