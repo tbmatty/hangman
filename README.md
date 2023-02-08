@@ -1,4 +1,13 @@
 # README
-def ask_for_input asks the user for input and makes sure that it is a single alphabetical character
+This is a github repo that has been automatically generated for the AiCore project 'Hangman'. The aim of this project is to get to grips with best practices for git and to solidify skills in python programming.
 
-def check_guess checks the user input to see if it is in the computer generated word.
+###Function definitions
+#####ask_for_input
+asks the user for input and makes sure that it is a single alphabetical character
+def ask_for_input asks the user for input and makes sure that it is a single alphabetical character
+#####check_guess
+checks the user input to see if it is in the computer generated word.
+I really really really hope that this is 500 characters...
+hmmm....
+hmmmmmm.....
+hmmmmmmmmmmmmmmm......
