@@ -1,4 +1,24 @@
+#%%
+
 import random
+
+
+def play_game(word_list):
+    num_lives = 5
+    word_list = ['mango','blueberries','banana','pineapple','watermelon']
+
+    game = Hangman(num_lives=num_lives, word_list=word_list)
+    while(True):
+        if(game.num_lives<=0):
+            print("You lose!")
+            break
+        if(game.num_letters>0):
+            game.ask_for_input()
+        if(game.num_lives != 0 and game.num_letters<=0):
+            print("You won")
+            break
+
+
 class Hangman:
 
     def __init__(self, word_list, num_lives=5):
@@ -18,8 +38,8 @@ class Hangman:
             for i in range(len(word_chars)):
                 if(guess==word_chars[i]):
                     self.word_guessed[i]=guess
-                    
-            self.num_letters -= 1
+                    self.num_letters = self.num_letters -1 
+            print("num letters: "+str(self.num_letters))          
         else:
             self.num_lives -= 1
             print("Uh oh! That is not in the word")
@@ -36,3 +56,9 @@ class Hangman:
                 print("Oops! You silly goose. You've already guessed that letter.")
             else:
                 self.check_guess(guess)
+
+
+play_game(5)
+
+
+# %%
