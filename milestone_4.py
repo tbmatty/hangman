@@ -38,4 +38,5 @@ class Hangman:
                 break
             else:
                 self.check_guess(guess)
+                self.list_of_guesses.append(guess)
                 break
