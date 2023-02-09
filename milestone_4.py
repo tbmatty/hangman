@@ -32,7 +32,9 @@ class Hangman:
             guess = input("Please pick a letter")
             if(not(guess.isalpha() and len(guess)==1)):
                 print("Invalid letter. What the heck! Enter a single alphabetical character")
+                break
             elif(guess in self.list_of_guesses):
                 print("Oops! You silly goose. You've already guessed that letter.")
+                break
             else:
                 self.check_guess(guess)
