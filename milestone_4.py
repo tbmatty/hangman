@@ -14,7 +14,7 @@ class Hangman:
         word_chars = self.word.split()
 
         if(guess in self.word):
-            print("Good guess! "+guess+" is in the word")
+            print(f"Good guess! {guess} is in the word.")
             for i in range(len(word_chars)):
                 if(guess==word_chars[i]):
                     self.word_guessed[i]=guess
