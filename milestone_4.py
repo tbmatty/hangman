@@ -38,3 +38,4 @@ class Hangman:
                 break
             else:
                 self.check_guess(guess)
+                break
